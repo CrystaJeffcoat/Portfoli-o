@@ -6,6 +6,10 @@ header, main, footer {
   bottom: auto;
 }
 
+.sidenav.sidenav-fixed {
+  height: 110vh;
+}
+
 .sidenav .user-view .circle {
   height: 260px;
   width: 200px;
