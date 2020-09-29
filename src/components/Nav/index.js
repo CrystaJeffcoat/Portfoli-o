@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import CollapsibleContact from '../CollapsibleContact';
-import { M } from 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import { RiCodeSSlashLine, RiAccountCircleFill, RiHome2Fill } from 'react-icons/ri';
 import './style.css';
@@ -9,6 +8,7 @@ import './style.css';
 class Sidenav extends Component {
 
   componentDidMount() {
+    const M = window.M
     let sidenav = M.Sidenav.init(this.Sidenav, {draggable: true,});
     sidenav.close();
   }

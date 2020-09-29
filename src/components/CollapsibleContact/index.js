@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { M } from 'materialize-css/dist/css/materialize.min.css';
 import { GoMarkGithub, GoMail, GoFilePdf } from 'react-icons/go';
 import { RiLinkedinFill, RiAccountCircleLine } from 'react-icons/ri';
 import './style.css';
@@ -7,6 +6,7 @@ import './style.css';
 class Collapsible extends Component {
 
   componentDidMount() {
+    const M = window.M
     document.addEventListener('DOMContentLoaded', function () {
       let elems = document.querySelectorAll('.collapsible');
       M.Collapsible.init(elems, {});
