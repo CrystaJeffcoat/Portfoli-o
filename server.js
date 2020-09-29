@@ -1,5 +1,5 @@
 const express = require("express");
-const routes = require("./routes");
+const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -10,7 +10,11 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("build"));
 }
-app.use(routes);
+
+app.use("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "./build/index.html"));
+});
+
 
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!`);
