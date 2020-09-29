@@ -8,9 +8,10 @@ static propTypes = {
   render() {
     const { Children } = this.props
     return (
-      <Nav>
+      <div>
+        <Nav />
         {children}
-      </Nav>
+      </div>
     );
   }
 }
