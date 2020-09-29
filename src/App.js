@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <Router history={hashHistory}>
+    <Router>
       <Route path='/' component={Home} />
       <Route path='/about' component={About} />
       <Route path='/projects' component={Projects} />
